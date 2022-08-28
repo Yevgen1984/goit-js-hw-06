@@ -15,7 +15,7 @@ const images = [
   },
 ];
 
-let constructHtml = (data , target_block) => {
+const constructHtml = (data, target_block) => {
 
     data.forEach(element => {
 

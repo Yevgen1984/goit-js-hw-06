@@ -12,7 +12,7 @@ document.querySelector('.login-form').addEventListener('submit', function(e) {
     }
 
     let obj = {email:field_email.value,password:field_passw.value};
-    document.querySelector('.login-form').reset();
+    this.reset();
     console.log(obj);
 });
 
