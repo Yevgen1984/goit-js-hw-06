@@ -6,11 +6,11 @@ function getRandomHexColor() {
 
 function createBoxes(amount)
 {
-  let width = 30;
-  let heigth = 30;
+  const width = 30;
+  const heigth = 30;
 
-  for(let i = 0; i < amount; i++) {
-      let el = document.createElement('div');
+  for(const i = 0; i < amount; i++) {
+      const el = document.createElement('div');
       el.style.width = width + 'px';
       el.style.height = heigth + 'px';  
       el.style.backgroundColor = getRandomHexColor();
@@ -27,7 +27,7 @@ function destroyBoxes(){
 document.querySelector('[data-create]').addEventListener('click', function(e){
   e.preventDefault();
   destroyBoxes();
-  let input = document.querySelector('[type="number"]');
+  const input = document.querySelector('[type="number"]');
   if (input.value >= input.getAttribute('min') || input.value <= input.getAttribute('max')  ) {
     createBoxes(input.value);
   }
@@ -39,7 +39,8 @@ document.querySelector('[data-destroy]').addEventListener('click', function(e){
 });
 
 
-
+// 10 завдання: - кожен клік на кнопку create має створювати блоки далі 
+// з наростаючими розмірами - змінні, оголошені через let, ніколи не змінюються "
 
 
 

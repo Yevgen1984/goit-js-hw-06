@@ -1,22 +1,27 @@
-// document.querySelector('button[type="submit"].')
+// 
 
 
-document.querySelector('.login-form').addEventListener('submit', function(e) {
-    e.preventDefault(); 
-    let field_email = this.elements[0];
-    let field_passw = this.elements[1];
+document.querySelector('.login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    const {email, password} = event.target.elements;
+    console.dir(event.target.elements)
+    const fieldEmail = email.value;
+    const fieldPassw = password.value;
 
-    if (field_email.value.length == 0 || field_passw.value.length == 0) {
+    if (fieldEmail.length == 0 || fieldPassw.length == 0) {
         alert('Всі поля повинні бути заповнені');
-        return 0;
+        return;
     }
 
-    let obj = {email:field_email.value,password:field_passw.value};
-    this.reset();
+    const obj = {email:fieldEmail, password:fieldPassw};
+    event.target.reset();
     console.log(obj);
 });
 
 
+const form = document.querySelector(".login-form");
+
+// 8 завдання: - діставай значення за ключами, а не за індексами - змінні, оголошені через let, ніколи не змінюються
 
 // Обробка відправлення форми form.login-form повинна відбуватися відповідно до події submit.
 // Під час відправлення форми сторінка не повинна перезавантажуватися.

@@ -2,16 +2,16 @@
 "use strict";
 
 const AllUlCategories = document.querySelectorAll('.item')
+console.log('Number of categories:', AllUlCategories.length);
+
 const categoriesArray = [...AllUlCategories]
 for (const categories of categoriesArray) {
     const title = categories.querySelector('h2')
     const collection = categories.querySelector('ul')
-    console.log("categori:", title.textContent);
+
+    console.log("category:", title.textContent);
     console.log("Element:", collection.children.length)
 }
-
-
-console.log('Number of categories:', AllUlCategories.length);
 
 
 

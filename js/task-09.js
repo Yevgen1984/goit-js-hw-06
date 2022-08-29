@@ -13,5 +13,3 @@ document.querySelector('.change-color').addEventListener('click',function(e){
 });
 
 
-
-

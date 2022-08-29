@@ -1,11 +1,16 @@
 
-document.querySelector('#validation-input').onblur  = function() {
-    this.removeAttribute('class');
-    if (this.value.length < this.getAttribute('data-length')) {
-        this.classList.add('invalid');
+document.querySelector('#validation-input').addEventListener('blur', function(event) {
+  
+    const {value, dataset, classList} = event.target;   
+    console.dir(event);
+    if (value.length.toString() !== (dataset.length)) {
+        classList.add('invalid');
     } else {
-        this.classList.add('valid');
+        classList.add('valid');
+        classList.remove('invalid');
     }
-};
+});
 
 
+
+// 6 завдання: - твоє рішення не працює
